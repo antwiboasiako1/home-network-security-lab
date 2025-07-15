@@ -7,127 +7,81 @@ A hands-on security simulation using pfSense, Snort, Kali Linux, and Wireshark i
 
 ## 📶 Step 1: Verify Kali VM Network Configuration
 
-**Description:**  
-Check Kali’s IP address to confirm it’s within the same subnet as the pfSense firewall and target VMs.
-
 **Command:**  
 ```bash
 ip a
 ```
 
 **Screenshot:**  
-![Kali IP Address](screenshots/screenshot%201.png)
+![Kali IP](screenshots/screenshot 1.png)
 
 ---
 
-## 🔍 Step 2: Run Nmap Scan from Kali
-
-**Description:**  
-Use Nmap to detect open ports on the target (e.g., pfSense). This simulates reconnaissance by an attacker.
-
-**Command:**  
+## 🔍 Step 2: Run Nmap Scan from Kali  
 ```bash
 nmap -sS 192.168.56.1
 ```
 
-**Screenshot:**  
-![Nmap Port Scan](screenshots/screenshot%202.png)
+![Nmap Port Scan](screenshots/screenshot 2.png)
 
 ---
 
-## 🧪 Step 3: Start Wireshark Packet Capture
-
-**Description:**  
-Begin capturing traffic on `eth0` before simulating attacks to analyze packets.
-
-**Screenshot:**  
-![Wireshark Start Capture](screenshots/Screenshot%203.png)
+## 🧪 Step 3: Start Wireshark Packet Capture  
+![Wireshark Start](screenshots/Screenshot 3.png)
 
 ---
 
-## 💥 Step 4: Capture Suspicious Activity with Nmap Aggressive Scan
-
-**Command:**  
+## 💥 Step 4: Aggressive Nmap Scan with Wireshark  
 ```bash
 nmap -A 192.168.56.1
 ```
 
-**Description:**  
-Aggressive Nmap scan sends multiple probe types that may be flagged by Snort IDS.
-
-**Screenshot:**  
-![Nmap Aggressive Scan + Wireshark](screenshots/Screenshot%204.png)
+![Aggressive Scan](screenshots/Screenshot 4.png)
 
 ---
 
-## 🧱 Step 5: Install Snort Package in pfSense
-
-**Description:**  
-Access pfSense’s package manager to install Snort for real-time intrusion detection.
-
-**Screenshot:**  
-![Snort Installed](screenshots/Screenshot%205.png)
+## 🧱 Step 5: Install Snort on pfSense  
+![Snort Install](screenshots/Screenshot 5.png)
 
 ---
 
-## 🧰 Step 6: Configure Snort Interface on pfSense
-
-**Description:**  
-Enable Snort on the LAN interface, configure packet logging and unified2 alerts.
-
-**Screenshot:**  
-![Snort Interface Config](screenshots/Screenshot%206.png)
+## 🧰 Step 6: Configure Snort Interface  
+![Snort Config](screenshots/Screenshot 6.png)
 
 ---
 
-## 🧾 Step 7: Review Active Snort Interfaces
-
-**Description:**  
-Verify Snort is active on the correct interface and monitoring the right traffic.
-
-**Screenshot:**  
-![Snort Interfaces Overview](screenshots/Screenshot%207.png)
+## 📊 Step 7: Review Snort Interfaces  
+![Snort Interfaces](screenshots/Screenshot 7.png)
 
 ---
 
-## 📊 Step 8: Monitor Snort Alert Logs
-
-**Description:**  
-Inspect Snort logs for real-time detection of the Nmap scan and other potential attacks.
-
-**Screenshot:**  
-![Snort Alerts](screenshots/Screenshot%209.png)
+## 🧪 Step 8: Final Packet Capture  
+![Packet Capture](screenshots/Screenshot 8.png)
 
 ---
 
-## 🔄 Step 9: Update Snort Rulesets
-
-**Description:**  
-Go to the "Updates" tab in Snort and install the latest community rules to enhance detection.
-
-**Screenshot:**  
-![Snort Rules Update](screenshots/Screenshot%2010.png)
+## 🚨 Step 9: Snort Alert Logs  
+![Snort Alerts](screenshots/Screenshot 9.png)
 
 ---
 
-## 🎯 Final Result: Packets Captured and IDS Detection Confirmed
+## 🔄 Step 10: Snort Ruleset Update  
+![Ruleset Update](screenshots/Screenshot 10.png)
 
-**Description:**  
-Return to Wireshark and validate that Nmap scan packets are captured, and alerts were triggered in Snort.
+---
 
-**Screenshot:**  
-![Packet Captures Final](screenshots/Screenshot%208.png)
+## ✅ Step 11: Summary Dashboard  
+![Summary](screenshots/Screenshot 11.png)
 
 ---
 
 ## ✅ Conclusion
 
-This home lab simulates real-world threat detection and response, showcasing your skills in:
-- Network scanning
-- Packet inspection
-- IDS deployment
-- Firewall configuration
+This lab showcases:
+- 🔍 Network scanning
+- 🧱 Firewall configuration
+- 🧪 Packet inspection
+- 🚨 IDS alerting
 
-🔗 Project Repo: [GitHub.com/yourusername/Home-Network-Security-System](https://github.com/yourusername/Home-Network-Security-System)
-
-📩 Connect with me on [LinkedIn](https://www.linkedin.com/in/david-antwi-408907149)
+📩 Connect: [LinkedIn – David Antwi](https://www.linkedin.com/in/david-antwi-408907149)  
+📁 Repo: [GitHub](https://github.com/yourusername/Home-Network-Security-System)
